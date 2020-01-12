@@ -1,7 +1,7 @@
 # InstaGameTheory
 An eye for an eye, a like for a like. After all, the goal of social media is to win, right? And winning clearly means asserting dominance over your friends making sure they're properly rewarded and punished for their actions. You should like your friend's posts in direct proportion to them liking your posts, that way they're rewarded for good behavior, and punished for not liking you enough! 
 
-InstaGameTheory is an Instagram like bot which uses the unofficial [Instagram Python API](https://github.com/LevPasha/Instagram-API-python). It only power is to like posts (never unlike), but allows you to like others' posts using some basic strategies from game theory. 
+InstaGameTheory is an Instagram like bot which uses the unofficial [Instagram Python API](https://github.com/LevPasha/Instagram-API-python). Its only power is to like posts (never unlike), but allows you to like others' posts using some basic strategies from game theory. 
 
 
 ## Usage
