@@ -34,7 +34,6 @@ def get_likes_list(username, api):
     for post in info['items']:
         post_like_list = []
         media_id = post['id']
-        # media_id = info['items'][0]['id']
 
         api.getMediaLikers(media_id)
         f = api.LastJson['users']
@@ -42,8 +41,6 @@ def get_likes_list(username, api):
             post_like_list.append(x['username'])
         media_likes_list.append(MediaLikes(post_like_list, media_id, post['has_liked']))
     return media_likes_list
-
-# def like_posts(username, post_ids, api):
 
 
 def flatten_list(a_list):
@@ -73,7 +70,6 @@ def plot_list(x, y):
     ax.barh(ind, y, width, color="blue")
     ax.set_yticks(ind+width/2)
     ax.set_yticklabels(x, minor=False)
-    # plt.xlim([-1,20])
     plt.xlabel('Number of Likes')
     plt.ylabel('User Profile')      
     plt.title("Instagram Likes Statistics")
@@ -91,6 +87,10 @@ def get_unliked_idxs(usr_name, like_list):
 def run_autoliker(strategy="tit_for_tat", verbose=False):
     api = InstagramAPI(instauser, instapass)
     api.login()
+
+    # Uncomment if login issues, then while sleeping click on the link to verify your login.
+    # time.sleep(15)
+    # api.login()
 
     print('Account: {}'.format(api.username))
 
